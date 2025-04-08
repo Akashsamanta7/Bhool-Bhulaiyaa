@@ -1,0 +1,192 @@
+/* Base Styles */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Level Header - From your design */
+.level-title {
+    font-size: 2.5rem;
+    color: #D2691E;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-bottom: 2px solid #8B4513;
+    padding-bottom: 10px;
+}
+
+/* Room Description - From your design */
+.level-description {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #8B4513;
+    white-space: pre-line;
+    text-align: center;
+}
+
+/* Guides Section - From your design */
+.guides-container {
+    background-color: #252525;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+}
+
+.guide {
+    background-color: #2a2a2a;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 4px solid;
+}
+
+.guide:last-child {
+    margin-bottom: 0;
+}
+
+.guide-a { border-left-color: #FF5733; }
+.guide-b { border-left-color: #FFC300; }
+.guide-c { border-left-color: #DAF7A6; }
+.guide-d { border-left-color: #3498DB; }
+
+.guide-name {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #c9a227; /* Gold color for guide letters */
+}
+
+/* Doors Container - From my design but enhanced */
+.doors-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.door {
+    flex: 1 1 40%;
+    min-width: 150px;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    color: black;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.door:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Door colors - From your design */
+.door-red { background-color: #E74C3C; }
+.door-blue { background-color: #3498DB; }
+.door-green { background-color: #2ECC71; }
+.door-yellow { background-color: #F1C40F; }
+
+/* Game container - From my design */
+#game-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add these styles at the bottom: */
+
+.reward-screen {
+    text-align: center;
+    padding: 30px;
+    animation: fadeIn 1s ease;
+}
+
+.reward-screen h2 {
+    color: #c9a227;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.trophy {
+    font-size: 5rem;
+    margin: 20px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Reward Level Container */
+.reward-content {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Reset Button Container */
+.reset-button-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Reset Button */
+.reset-button {
+    display: inline-block; /* Better for centering */
+    padding: 12px 30px;
+    background-color: #c9a227;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.reset-button:hover {
+    background-color: #e0b93b;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(201, 162, 39, 0.4);
+}
+
+/* Emergency center fix */
+#level-display {
+    text-align: center;
+}
+
+#level-display .reset-button {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
